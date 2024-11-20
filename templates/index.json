@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "hero_banner_new_RwjLxa": {
       "type": "hero-banner-new",
@@ -49,11 +49,7 @@
           }
         }
       },
-      "block_order": [
-        "slide_4xTp7Y",
-        "slide_Ai9VXM",
-        "slide_DqwfnF"
-      ],
+      "block_order": ["slide_4xTp7Y", "slide_Ai9VXM", "slide_DqwfnF"],
       "settings": {}
     },
     "icon_info_card_new_cnfnTf": {
@@ -84,12 +80,55 @@
           }
         }
       },
-      "block_order": [
-        "slide_LDkptP",
-        "slide_hqcQdD",
-        "slide_rtWEUg"
-      ],
+      "block_order": ["slide_LDkptP", "slide_hqcQdD", "slide_rtWEUg"],
       "settings": {}
+    },
+    "image_carousel_UALzK6": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_gwBdKR": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify://shop_images/Frame_1410077561_1.png",
+            "desktop_image": "shopify://shop_images/Frame_1410077561.png"
+          }
+        },
+        "slide_9a8wgY": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify://shop_images/Frame_1410077561_1.png",
+            "desktop_image": "shopify://shop_images/Frame_1410077561.png"
+          }
+        },
+        "slide_wcMBwb": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify://shop_images/Frame_1410077561_1.png",
+            "desktop_image": "shopify://shop_images/Frame_1410077561.png"
+          }
+        },
+        "slide_wJBLBi": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify://shop_images/Frame_1410077561_1.png",
+            "desktop_image": "shopify://shop_images/Frame_1410077561.png"
+          }
+        },
+        "slide_mTGhmY": {
+          "type": "slide",
+          "settings": {
+            "mobile_image": "shopify://shop_images/Frame_1410077561_1.png",
+            "desktop_image": "shopify://shop_images/Frame_1410077561.png"
+          }
+        }
+      },
+      "block_order": ["slide_gwBdKR", "slide_9a8wgY", "slide_wcMBwb", "slide_wJBLBi", "slide_mTGhmY"],
+      "settings": {
+        "heading": "Transforming every Journey into a Mystical Adventure",
+        "bottom_heading": "Kooji Jute",
+        "button_text": "Explore Jute",
+        "button_link": "shopify://collections/all"
+      }
     },
     "bestseller_new_UWAxHP": {
       "type": "bestseller-new",
@@ -121,20 +160,51 @@
           }
         }
       },
-      "block_order": [
-        "block_3xF3y8",
-        "block_mjnAgE"
-      ],
+      "block_order": ["block_3xF3y8", "block_mjnAgE"],
       "settings": {
         "heading": "Our Bestsellers",
         "button_text": "Explore All",
         "button_link": "shopify://collections/all"
+      }
+    },
+    "image_gallery_XzBRrD": {
+      "type": "image-gallery",
+      "blocks": {
+        "gallery_HiEFmH": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_435.png",
+            "image_2": "shopify://shop_images/Rectangle_436.png",
+            "image_3": "shopify://shop_images/Rectangle_435.png",
+            "width": "210",
+            "height": "232"
+          }
+        },
+        "gallery_kdQdyg": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_439.png",
+            "image_2": "shopify://shop_images/Rectangle_437_1.png",
+            "image_3": "shopify://shop_images/Rectangle_439.png",
+            "image_4": "shopify://shop_images/Rectangle_439.png",
+            "width": "210",
+            "height": "207"
+          }
+        }
+      },
+      "block_order": ["gallery_HiEFmH", "gallery_kdQdyg"],
+      "settings": {
+        "title": "Excited about what’s happening at Kooji?",
+        "background_color": "#95222e",
+        "image": "shopify://shop_images/Frame_1410077560.png"
       }
     }
   },
   "order": [
     "hero_banner_new_RwjLxa",
     "icon_info_card_new_cnfnTf",
-    "bestseller_new_UWAxHP"
+    "image_carousel_UALzK6",
+    "bestseller_new_UWAxHP",
+    "image_gallery_XzBRrD"
   ]
 }
