@@ -1,0 +1,86 @@
+<div class="icon-card-main icon-card-main-{{ section.id }}">
+  <div class="container">
+    <div class="info-cards-wrapper">
+      <div class="info-card-slider keen-slider">
+        {% for block in section.blocks %}
+          <div class="info-card keen-slider__slide">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image |  img_url: '64x' }}" alt="" width="100%" height="100%">
+            {% endif %}
+            {% if block.settings.heading != blank %}
+              <h3>{{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}</h3>
+            {% endif %}
+            {% if block.settings.paragraph != blank %}
+              {{ block.settings.paragraph }}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function infoCardSliderInit() {
+    let slider = new KeenSlider('.icon-card-main-{{ section.id }} .info-card-slider', {
+      loop: true,
+      mode: 'free-snap',
+      slides: {
+        origin: 'center',
+        perView: 1.4,
+      },
+    });
+  }
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    infoCardSliderInit();
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Info cards",
+  "settings": [],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "<p>True to Indigenous &<br>Artisanal Perfumery</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "<p>Proudly Handmade, inspired from the Traditional Perfumeries of Kanauj</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info cards",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,205 @@
+{% capture car_icon %}
+    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_11_498)">
+    <path d="M5.25697 13.9091C6.16071 13.9091 6.89333 13.1765 6.89333 12.2728C6.89333 11.369 6.16071 10.6364 5.25697 10.6364C4.35323 10.6364 3.62061 11.369 3.62061 12.2728C3.62061 13.1765 4.35323 13.9091 5.25697 13.9091Z" stroke="#21231D" stroke-width="1.09091" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13.9843 13.9091C14.888 13.9091 15.6206 13.1765 15.6206 12.2728C15.6206 11.369 14.888 10.6364 13.9843 10.6364C13.0805 10.6364 12.3479 11.369 12.3479 12.2728C12.3479 13.1765 13.0805 13.9091 13.9843 13.9091Z" stroke="#21231D" stroke-width="1.09091" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6.89331 12.2728H12.3479" stroke="#21231D" stroke-width="1.09091" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15.6205 12.2728H17.2569C17.4016 12.2728 17.5403 12.2153 17.6426 12.113C17.7449 12.0107 17.8024 11.872 17.8024 11.7273V9.00007C17.8024 8.8554 17.7449 8.71666 17.6426 8.61437C17.5403 8.51208 17.4016 8.45461 17.2569 8.45461H15.0751L11.9619 5.34143C11.8597 5.23933 11.7211 5.18195 11.5767 5.18188H3.91236C3.82265 5.18194 3.73434 5.20412 3.65525 5.24646C3.57616 5.2888 3.50874 5.34999 3.45895 5.42461L1.43872 8.45461V11.7273C1.43872 11.872 1.49619 12.0107 1.59848 12.113C1.70077 12.2153 1.83951 12.2728 1.98418 12.2728H3.62054" stroke="#21231D" stroke-width="1.09091" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15.0751 8.45459H1.43872" stroke="#21231D" stroke-width="1.09091" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_11_498">
+    <rect width="17.4545" height="17.4545" fill="#21231D" transform="translate(0.893311 0.272766)"/>
+    </clipPath>
+    </defs>
+    </svg>
+{% endcapture %}
+{% capture home_icon %}
+    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_58_510)">
+<path d="M1.98425 15H17.257" stroke="#21231D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.257 15V10.6364H7.98425V15" stroke="#21231D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.62061 8.22882V15" stroke="#21231D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.6206 15V8.22882" stroke="#21231D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.52966 9.31976L9.23466 2.61408C9.28532 2.56336 9.34548 2.52313 9.41169 2.49568C9.47791 2.46823 9.54889 2.4541 9.62057 2.4541C9.69225 2.4541 9.76323 2.46823 9.82945 2.49568C9.89566 2.52313 9.95582 2.56336 10.0065 2.61408L16.7115 9.31976" stroke="#21231D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_58_510">
+<rect width="17.4545" height="17.4545" fill="white" transform="translate(0.893311 0.272705)"/>
+</clipPath>
+</defs>
+</svg>
+{% endcapture %}
+
+<div class="bestSeller-main">
+  <div class="container">
+    <div class="bestSeller-wrapper">
+      <div class="bestSeller-header">
+        {% if section.settings.heading != blank %}
+          <div class="bestSeller-heading">
+            <h3>{{ section.settings.heading }}</h3>
+          </div>
+        {% endif %}
+
+        {% if section.settings.button_link != blank %}
+          <div class="animation-btn white">
+            <a href="{{ section.settings.button_link }}">
+              <span class="btn-text">{{ section.settings.button_text }}</span>
+              <span class="arrow-svg-wrapper">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_11_904)">
+                  <path d="M3.87061 12.7666H20.3706" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.6206 6.0166L20.3706 12.7666L13.6206 19.5166" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_11_904">
+                  <rect width="24" height="24" fill="white" transform="translate(0.120605 0.766602)"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      <div id="tabbed-products-section">
+        <div class="tabs">
+          {% for block in section.blocks %}
+            <button class="tab-link" data-tab="{{ block.id }}">
+              <span class="tab-icon">
+                {% if block.settings.tab_svg == 'carProfile' %}
+                  {{ car_icon }}
+                {% endif %}
+                {% if block.settings.tab_svg == 'houseLine' %}
+                  {{ home_icon }}
+                {% endif %}
+              </span>
+              <span class="tab-text">{{ block.settings.tab_heading }}</span>
+            </button>
+          {% endfor %}
+        </div>
+        <div class="tab-content">
+          {% for block in section.blocks %}
+            <div class="tab-panel" id="panel-{{ block.id }}">
+              {% for product in block.settings.product_list %}
+                <div class="product">
+                  <img
+                    src="{{ product.featured_image | img_url: 'medium' }}"
+                    alt="{{ product.title }}"
+                    width="100%"
+                    height="auto"
+                  >
+                  <h3>{{ product.title }}</h3>
+                  <p>{{ product.price | money }}</p>
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabLinks = document.querySelectorAll('#tabbed-products-section .tab-link');
+    const tabPanels = document.querySelectorAll('#tabbed-products-section .tab-panel');
+
+    tabLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const tabId = link.getAttribute('data-tab');
+
+        // Deactivate all tabs and panels
+        tabLinks.forEach((link) => link.classList.remove('active'));
+        tabPanels.forEach((panel) => panel.classList.remove('active'));
+
+        // Activate the clicked tab and corresponding panel
+        link.classList.add('active');
+        document.querySelector(`#panel-${tabId}`).classList.add('active');
+      });
+    });
+
+    // Activate the first tab by default
+    if (tabLinks.length > 0) {
+      tabLinks[0].click();
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Bestsellers",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Bestsellers"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Heading",
+      "default": "Explore All"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/collections/all"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_heading",
+          "label": "Tab Heading",
+          "default": "Car Fragrance"
+        },
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Products",
+          "limit": 4
+        },
+        {
+          "type": "select",
+          "id": "tab_svg",
+          "label": "Tab Icon",
+          "options": [
+            {
+              "value": "carProfile",
+              "label": "Car"
+            },
+            {
+              "value": "houseLine",
+              "label": "Home"
+            }
+          ],
+          "default": "carProfile"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bestsellers",
+      "blocks": [
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
