@@ -1,7 +1,7 @@
 /* global */
 .animation-btn.yellow {
   display: flex;
-  background: linear-gradient(to right, #ffb740 50%, #000 50%);
+  background: linear-gradient(to right, #000 50%, #ffb740 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
@@ -14,7 +14,7 @@
 .animation-btn.red {
   display: flex;
   background: linear-gradient(to right, #fff 50%, #95222e 50%);
-  background-size: 200% 100%;
+  background-size: 201% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
   width: 155px;
@@ -510,6 +510,247 @@ button.tab-link.active .tab-text {
 /* desktop style ends */
 
 /* bestseller style end */
+
+/* footer style */
+.footer-main {
+  width: 100%;
+}
+.footer-wrapper {
+  padding: 28px 24px 28px 24px;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.footer-about-block {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-menu-block,
+.footer-contact-block {
+  flex: 0 0 calc(50% - 16px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-block-header h3 {
+  font-family: Capriola;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+  margin: 0;
+}
+.footer-social-icon-list {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
+}
+.footer-contact-header h4 {
+  font-family: Capriola;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+  margin: 0;
+}
+.footer-contact-block a {
+  font-family: Cabin;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+  color: #fff;
+}
+.copyright-wrapper p {
+  margin: 0;
+  font-family: Capriola;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+}
+ul.footer-menu {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+li.footer-menu__item a {
+  font-family: Cabin;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+  color: #fff;
+}
+.footer-bottom {
+  border-top: 1px solid #f3e9b9;
+  margin-top: 20px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-svg {
+  width: 138px;
+  height: 64px;
+}
+.footer-svg svg {
+  width: 100%;
+  height: 100%;
+}
+/* desktop style */
+@media (min-width: 768px) {
+  .footer-wrapper {
+    padding: 32px 16px;
+  }
+  .footer-top {
+    padding-bottom: 130px;
+  }
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+  }
+  .footer-svg {
+    width: 103px;
+    height: 48px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-about-block {
+    flex: 0 0 calc(50% - 16px);
+  }
+  .footer-menu-block,
+  .footer-contact-block {
+    flex: 0 0 calc(15% - 16px);
+  }
+}
+
+/* desktop style end */
+/* footer style end */
+
+/* image carousel style start */
+.image-carousel-main {
+  width: 100%;
+}
+.image-carousel-top-heading {
+  background: #320707;
+  padding: 32px 16px 80px;
+}
+.image-carousel-top-heading h3 {
+  margin: 0;
+  font-family: Capriola;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+}
+.image-carousel-bottom-bar {
+  padding: 20px 16px 32px;
+  background: #320707;
+}
+.image-carousel-bottom-bar > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.carousel-bottom-heading h3 {
+  font-family: Capriola;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+}
+.image-carousel-bottom-bar a {
+  font-family: Cabin;
+  font-size: 11.61px;
+  font-weight: 600;
+  line-height: 13.93px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.image-carousel-bottom-bar .arrow-svg-wrapper svg {
+  width: 17px;
+  height: 17px;
+}
+.image-carousel-bottom-bar .animation-btn.yellow {
+  width: 140px;
+  height: 40px;
+  border-radius: 5.8px;
+}
+.image-carousel-bottom-bar .arrow-svg-wrapper svg path {
+  stroke: #000;
+}
+.image-carousel-bottom-bar .animation-btn:hover svg path {
+  stroke: #fff;
+  fill: #000;
+}
+.image-carousel-slide picture {
+  display: flex;
+}
+.image-carousel-wrapper .dots {
+  display: none;
+}
+.image-carousel-bottom-bar {
+  padding: 80px 16px 32px;
+  background: #320707;
+}
+/* desktop style */
+@media (min-width: 768px) {
+  .image-carousel-top-bar {
+    background: #320707;
+  }
+  .image-carousel-top-heading h3 {
+    text-align: center;
+  }
+  .image-carousel-top-heading,
+  .image-carousel-bottom-bar {
+    padding: 32px 16px;
+  }
+  .image-carousel-wrapper .dots {
+    display: flex;
+    justify-content: center;
+    bottom: -70px;
+  }
+  .image-carousel-wrapper .dots .dot.dot--active {
+    background: #fff;
+  }
+  .image-carousel-wrapper .dots .dot {
+    border: 1px solid #fff;
+  }
+}
+/* desktop style end */
+/* image carousel style ends */
 
 /* hide css */
 .desktop,
