@@ -1,0 +1,355 @@
+{% style %}
+  {% if section.settings.background_color != blank %}
+    .featured-product-{{ section.id }}
+    .featured-pro-wrapper {
+      background: {{ section.settings.background_color }};
+    }
+  {% endif %}
+  {% if section.settings.heading_color != blank %}
+    .featured-product-{{ section.id }}
+    .featured-pro-title {
+      color: {{ section.settings.heading_color }};
+    }
+    .featured-product-{{ section.id }}
+    .featured-pro-atc-wrapper button {
+      color: {{ section.settings.heading_color }};
+      border: 2px solid var(--Primary-Vivid-Auburn, {{ section.settings.heading_color }});
+    }
+  {% endif %}
+  {% if section.settings.content_color != blank %}
+    .featured-product-{{ section.id }}
+    .featured-pro-desc
+    , .featured-product-{{ section.id }}
+    .featured-pro-type
+    , .featured-product-{{ section.id }}
+    .featured-pro-price-wrapper {
+      color: {{ section.settings.content_color }};
+    }
+  {% endif %}
+  {% if section.settings.bottom_spacing != blank %}
+    .featured-pro-main {
+      margin-bottom: {{ section.settings.bottom_spacing }}px;
+    }
+  {% endif %}
+
+  .featured-pro-btn-{{ section.id }}
+  .animation-btn {
+    background: linear-gradient(to right,{{ section.settings.button_background_hover }} 50%,{{ section.settings.button_background }} 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+  }
+
+  .featured-pro-btn-{{ section.id }}
+  > .animation-btn a {
+    color: {{ section.settings.button_text_color }};
+  }
+  .featured-pro-btn-{{ section.id }} > .animation-btn:hover {
+    background-position: left bottom;
+  }
+  .featured-pro-btn-{{ section.id }} > .animation-btn:hover a {
+    color: {{ section.settings.button_text_color_hover }};
+  }
+  .featured-pro-btn-{{ section.id }} > .animation-btn:hover svg path {
+    stroke: {{ section.settings.button_text_color_hover }};
+  }
+{% endstyle %}
+
+<div class="featured-pro-main featured-product-{{ section.id }}">
+  <div class="container category-page">
+    <div class="featured-pro-wrapper">
+      <div class="featured-pro-header">
+        <div class="featured-pro-title-wrapper">
+          {% if section.settings.title != blank %}
+            <div class="featured-pro-title">
+              {{ section.settings.title }}
+            </div>
+          {% endif %}
+          {% if section.settings.paragraph != blank %}
+            <div class="featured-pro-desc">
+              {{ section.settings.paragraph }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="featured-pro-btn-wrapper featured-pro-btn-{{ section.id }}">
+          {% if section.settings.button_link != blank %}
+            <div class="animation-btn">
+              <a href="{{ section.settings.button_link }}">
+                <span class="btn-text">{{ section.settings.button_text }}</span>
+                <span class="arrow-svg-wrapper">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 25 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_11_904)">
+                      <path
+                        d="M3.87061 12.7666H20.3706"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M13.6206 6.0166L20.3706 12.7666L13.6206 19.5166"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_11_904">
+                        <rect
+                          width="24"
+                          height="24"
+                          fill="white"
+                          transform="translate(0.120605 0.766602)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="featured-pro-content {{ section.settings.image_position_desktop }}">
+        <div class="featured-pro-image-wrapper">
+          <picture>
+            {% if section.settings.mobile_image != blank %}
+              <!-- Mobile image (shown if screen size matches) -->
+              <source srcset="{{ section.settings.mobile_image | img_url: '720x' }}" media="(max-width: 767px)">
+            {% endif %}
+
+            {% if section.settings.desktop_image != blank %}
+              <!-- Desktop image (shown if no mobile image or larger screens) -->
+              <source srcset="{{ section.settings.desktop_image | img_url: '1400x' }}" media="(min-width: 768px)">
+            {% endif %}
+
+            <!-- Fallback image -->
+            <img
+              src="{{ section.settings.desktop_image | img_url: '1400x' }}"
+              alt="Banner Image"
+              loading="eager"
+              width="100%"
+              height="100%">
+          </picture>
+        </div>
+        <div class="featured-pro-list">
+          <div class="featured-pro-slider keen-slider">
+            {% if section.settings.product_list.count > 0 %}
+              {% for product in section.settings.product_list %}
+                <div class="featured-pro-card keen-slider__slide">
+                  <div class="featured-pro-card-image">
+                    <img
+                      src="{{ product.featured_image |  img_url: 'original' }}"
+                      alt=""
+                      width="100%"
+                      height="100%">
+                  </div>
+                  <div class="featured-pro-type">
+                    <p>{{ product.type }}</p>
+                  </div>
+                  <div class="featured-pro-price-wrapper">
+                    {% if product.compare_at_price > product.price %}
+                      <!-- Display compare-at price if it's greater than the price -->
+                      <span class="product-card__compare-price">
+                        {{ product.compare_at_price | money }}
+                      </span>
+                      <span class="product-card__price product-card__price--sale">
+                        {{ product.price | money }}
+                      </span>
+                    {% else %}
+                      <!-- Display only the price if no compare-at price is set or it's not greater -->
+                      <span class="product-card__price">
+                        {{ product.price | money }}
+                      </span>
+                    {% endif %}
+                  </div>
+                  <div class="featured-pro-atc-wrapper">
+                    <button class="featured-pro-atc" data-variant="{{ product.variants[0].id }}">Add to cart</button>
+                  </div>
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+
+  let atcBtns = document.querySelectorAll(".featured-product-{{ section.id }} .featured-pro-atc");
+  atcBtns.forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        const variantId = btn.dataset.variant;
+        console.log("variantId",variantId)
+        addToCart(variantId, 1);
+    })
+  })
+  
+  async function addToCart(variantId, quantity) {
+    try {
+        // Define the URL for adding items to the cart
+        const addToCartUrl = '/cart/add.js';
+
+        // Prepare the payload
+        const payload = {
+            id: variantId, // The variant ID
+            quantity: quantity, // The quantity to add
+        };
+
+        // Make the fetch call to Shopify's add-to-cart endpoint
+        const response = await fetch(addToCartUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        // Check if the response is successful
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to add item to cart.');
+        }
+
+        // Parse the response
+        const responseData = await response.json();
+
+        // Alert success message
+        alert(`Success! Added ${responseData.title} to the cart.`);
+    } catch (error) {
+        // Handle errors
+        console.error('Error adding to cart:', error.message);
+        alert(`Failed to add to cart: ${error.message}`);
+    }
+  }
+
+
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        var slide = new KeenSlider('.featured-product-{{ section.id }} .featured-pro-slider', {
+        slides: {
+          perView: 1.8,
+          spacing: 18,
+        },
+      })
+    }
+  })();
+</script>
+
+{% schema %}
+  {
+    "name": "Featured Product New",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Jute"
+      },
+      {
+        "type": "richtext",
+        "id": "paragraph",
+        "label": "Paragraph",
+        "default": "<p>Clean, & natural by design, with scents to impress. </p>"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Heading",
+        "default": "Explore Jute"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link",
+        "default": "/collections/all"
+      }, {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Image"
+      }, {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Image desktop"
+      }, {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "Products",
+        "limit": 3
+      }, {
+        "type": "select",
+        "id": "image_position_desktop",
+        "label": "Image position desktop",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      }, {
+        "type": "header",
+        "content": "Color settings"
+      }, {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#FFB740"
+      }, {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Color",
+        "default": "#95222E"
+      }, {
+        "type": "color",
+        "id": "content_color",
+        "label": "Content Color",
+        "default": "#000000"
+      }, {
+        "type": "header",
+        "content": "Button Color"
+      }, {
+        "type": "color",
+        "id": "button_background",
+        "label": "Button Background",
+        "default": "#95222E"
+      }, {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#ffffff"
+      }, {
+        "type": "header",
+        "content": "Button Hover Color"
+      }, {
+        "type": "color",
+        "id": "button_background_hover",
+        "label": "Button Hover Background",
+        "default": "#ffffff"
+      }, {
+        "type": "color",
+        "id": "button_text_color_hover",
+        "label": "Button Hover Text Color",
+        "default": "#000000"
+      }, {
+        "type": "number",
+        "id": "bottom_spacing",
+        "label": "Section Bottom Spacing",
+        "default": 48
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Product New",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}
