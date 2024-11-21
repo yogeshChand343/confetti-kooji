@@ -1,0 +1,23 @@
+<div class="category-title-main">
+  <div class="container category-page">
+    <div class="caregory-title-wrapper">
+      {% if section.settings.title != blank %}
+        <h1>{{ section.settings.title }}</h1>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Category title",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Page Title",
+        "default": "Shop All"
+      }
+    ]
+  }
+{% endschema %}
