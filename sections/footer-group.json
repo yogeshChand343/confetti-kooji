@@ -1,12 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "name": "t:sections.footer.name",
-    "type": "footer",
-    "sections": {
-        "footer": {
-            "type": "footer-new",
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer-new",
+      "blocks": {
+        "social_icons_j8CNtC": {
+          "type": "social_icons",
+          "settings": {
+            "heading": "We scentastic on social!",
+            "show_twitter": true,
+            "twitter_link": "shopify://collections/all",
+            "show_insta": true,
+            "insta_link": "shopify://collections/all",
+            "show_youtube": true,
+            "youtube_link": "shopify://collections/all"
+          }
+        },
+        "menu_list_KUdWRF": {
+          "type": "menu_list",
+          "settings": {
+            "heading": "Kooji",
+            "menu": "main-menu"
+          }
+        },
+        "menu_list_rDg4MG": {
+          "type": "menu_list",
+          "settings": {
+            "heading": "Kooji",
+            "menu": "main-menu"
+          }
+        },
+        "contact_info_bXkkbM": {
+          "type": "contact_info",
+          "settings": {
+            "heading": "Get in touch",
+            "phone_heading": "Call us",
+            "phone_no": "+91 12344 55678",
+            "email_heading": "Email",
+            "email_id": "support@kooji.in"
+          }
         }
-    },
-    "order": [
-        "footer"
-    ]
+      },
+      "block_order": ["social_icons_j8CNtC", "menu_list_KUdWRF", "menu_list_rDg4MG", "contact_info_bXkkbM"],
+      "settings": {
+        "footer_background": "shopify://shop_images/Footer_1.png",
+        "copiright_Text": "2024, Kooji All rights reserved"
+      }
+    }
+  },
+  "order": ["footer"]
 }
