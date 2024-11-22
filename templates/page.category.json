@@ -108,12 +108,38 @@
         "button_text_color_hover": "#121212",
         "bottom_spacing": 48
       }
+    },
+    "featured_product_new_jUtRYW": {
+      "type": "featured-product-new",
+      "settings": {
+        "title": "Can",
+        "paragraph": "<p>Clean, & natural by design, with scents to impress. </p>",
+        "button_text": "Explore Jute",
+        "button_link": "shopify://collections/all",
+        "mobile_image": "shopify://shop_images/Firefly_A_picture_of_a_jute_perfume_bag_clipart_handdrawn_illustration_watercolor_18733_2.png",
+        "desktop_image": "shopify://shop_images/Firefly_A_picture_of_a_jute_perfume_bag_clipart_handdrawn_illustration_watercolor_18733_1.png",
+        "product_list": [
+          "the-3p-fulfilled-snowboard",
+          "the-collection-snowboard-hydrogen",
+          "the-collection-snowboard-liquid"
+        ],
+        "image_position_desktop": "right",
+        "background_color": "#646f52",
+        "heading_color": "#fcff78",
+        "content_color": "#ffffff",
+        "button_background": "#fcff78",
+        "button_text_color": "#21231d",
+        "button_background_hover": "#21231d",
+        "button_text_color_hover": "#fcff78",
+        "bottom_spacing": 48
+      }
     }
   },
   "order": [
     "title",
     "tabs",
     "featured_product_new_zK7xh6",
-    "featured_product_new_bhNYEi"
+    "featured_product_new_bhNYEi",
+    "featured_product_new_jUtRYW"
   ]
 }
