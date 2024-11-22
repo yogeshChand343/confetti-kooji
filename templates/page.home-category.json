@@ -52,9 +52,68 @@
           }
         }
       },
-      "block_order": ["button_kihRkg", "button_LnE4JX", "button_TyF8qT"],
+      "block_order": [
+        "button_kihRkg",
+        "button_LnE4JX",
+        "button_TyF8qT"
+      ],
       "settings": {}
+    },
+    "featured_product_new_gED3QU": {
+      "type": "featured-product-new",
+      "settings": {
+        "title": "Sprinkle",
+        "paragraph": "<p>Clean, & natural by design, with scents to impress. </p>",
+        "button_text": "Explore Jute",
+        "button_link": "shopify://collections/all",
+        "mobile_image": "shopify://shop_images/Firefly_A_picture_of_a_jute_perfume_bag_clipart_handdrawn_illustration_watercolor_18733_2.png",
+        "desktop_image": "shopify://shop_images/Untitln_ed_1_1_1.png",
+        "product_list": [
+          "the-3p-fulfilled-snowboard",
+          "the-collection-snowboard-hydrogen",
+          "the-collection-snowboard-liquid"
+        ],
+        "image_position_desktop": "left",
+        "background_color": "#b15d57",
+        "heading_color": "#ffffff",
+        "content_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#21231d",
+        "button_background_hover": "#21231d",
+        "button_text_color_hover": "#ffffff",
+        "bottom_spacing": 48
+      }
+    },
+    "featured_product_new_YHdahw": {
+      "type": "featured-product-new",
+      "settings": {
+        "title": "Can",
+        "paragraph": "<p>Clean, & natural by design, with scents to impress. </p>",
+        "button_text": "Explore Jute",
+        "button_link": "shopify://collections/all",
+        "mobile_image": "shopify://shop_images/Firefly_A_picture_of_a_jute_perfume_bag_clipart_handdrawn_illustration_watercolor_18733_2.png",
+        "desktop_image": "shopify://shop_images/Firefly_A_picture_of_a_jute_perfume_bag_clipart_handdrawn_illustration_watercolor_18733_1.png",
+        "product_list": [
+          "the-3p-fulfilled-snowboard",
+          "the-collection-snowboard-hydrogen",
+          "the-collection-snowboard-liquid"
+        ],
+        "image_position_desktop": "right",
+        "background_color": "#646f52",
+        "heading_color": "#ffffff",
+        "content_color": "#ffffff",
+        "button_background": "#fcff78",
+        "button_text_color": "#21231d",
+        "button_background_hover": "#ffffff",
+        "button_text_color_hover": "#21231d",
+        "bottom_spacing": 48
+      }
     }
   },
-  "order": ["title", "tabs"]
+  "order": [
+    "title",
+    "tabs",
+    "featured_product_new_gED3QU",
+    "featured_product_new_YHdahw"
+  ]
 }
