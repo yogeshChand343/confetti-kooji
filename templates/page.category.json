@@ -79,7 +79,7 @@
         "content_color": "#000000",
         "button_background": "#95222E",
         "button_text_color": "#ffffff",
-        "button_background_hover": "#ffffff",
+        "button_background_hover": "#FFB740",
         "button_text_color_hover": "#000000",
         "bottom_spacing": 48
       }
