@@ -52,7 +52,11 @@
           }
         }
       },
-      "block_order": ["button_kihRkg", "button_LnE4JX", "button_TyF8qT"],
+      "block_order": [
+        "button_kihRkg",
+        "button_LnE4JX",
+        "button_TyF8qT"
+      ],
       "settings": {}
     },
     "featured_product_new_zK7xh6": {
