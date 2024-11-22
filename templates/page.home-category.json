@@ -26,7 +26,7 @@
             "tab_heading": "Car",
             "tab_heading_desktop": "Car Fragrance",
             "button_text": "Explore All",
-            "button_link": "shopify://collections/all"
+            "button_link": "shopify://pages/car-fragrance"
           }
         },
         "button_LnE4JX": {
@@ -37,7 +37,7 @@
             "tab_heading": "Home",
             "tab_heading_desktop": "Home Fragrance",
             "button_text": "Explore All",
-            "button_link": "shopify://collections/all"
+            "button_link": "shopify://pages/home-fragrance"
           }
         },
         "button_TyF8qT": {
@@ -48,7 +48,7 @@
             "tab_heading": "Body",
             "tab_heading_desktop": "Body Fragrance",
             "button_text": "Explore All",
-            "button_link": "shopify://collections/all"
+            "button_link": "shopify://pages/body-fragrance"
           }
         }
       },
