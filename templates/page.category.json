@@ -79,7 +79,7 @@
         "content_color": "#000000",
         "button_background": "#95222E",
         "button_text_color": "#ffffff",
-        "button_background_hover": "#FFB740",
+        "button_background_hover": "#ffffff",
         "button_text_color_hover": "#000000",
         "bottom_spacing": 48
       }
@@ -104,8 +104,8 @@
         "content_color": "#ffffff",
         "button_background": "#ffffff",
         "button_text_color": "#95222e",
-        "button_background_hover": "#95222e",
-        "button_text_color_hover": "#121212",
+        "button_background_hover": "#21231d",
+        "button_text_color_hover": "#ffffff",
         "bottom_spacing": 48
       }
     },
