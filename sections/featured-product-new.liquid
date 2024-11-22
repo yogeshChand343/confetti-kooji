@@ -43,6 +43,10 @@
   > .animation-btn a {
     color: {{ section.settings.button_text_color }};
   }
+  .featured-pro-btn-{{ section.id }}
+  > .animation-btn svg path {
+    stroke: {{ section.settings.button_text_color }};
+  }
   .featured-pro-btn-{{ section.id }} > .animation-btn:hover {
     background-position: left bottom;
   }

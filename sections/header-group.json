@@ -3,10 +3,11 @@
   "type": "header",
   "sections": {
     "header": {
-      "type": "header-new"
+      "type": "header-new",
+      "settings": {
+        "menu": "main-menu"
+      }
     }
   },
-  "order": [
-    "header"
-  ]
+  "order": ["header"]
 }
