@@ -467,6 +467,13 @@ button.tab-link.active svg path {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
 }
 .tab-content p {
   font-family: Cabin;
@@ -482,7 +489,9 @@ button.tab-link.active svg path {
 button.tab-link.active .tab-text {
   padding-bottom: 12px;
 }
-
+.tab-content a {
+  display: none;
+}
 /* desktop style */
 @media (min-width: 768px) {
   .bestSeller-main {
@@ -534,6 +543,22 @@ button.tab-link.active .tab-text {
   span.tab-icon svg {
     width: 24px;
     height: 24px;
+  }
+  .tab-content a {
+    width: 100%;
+    height: 56px;
+    background: #95222e;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: Cabin;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
   }
 }
 
