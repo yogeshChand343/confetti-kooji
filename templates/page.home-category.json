@@ -52,11 +52,7 @@
           }
         }
       },
-      "block_order": [
-        "button_kihRkg",
-        "button_LnE4JX",
-        "button_TyF8qT"
-      ],
+      "block_order": ["button_kihRkg", "button_LnE4JX", "button_TyF8qT"],
       "settings": {}
     },
     "featured_product_new_gED3QU": {
@@ -110,10 +106,5 @@
       }
     }
   },
-  "order": [
-    "title",
-    "tabs",
-    "featured_product_new_gED3QU",
-    "featured_product_new_YHdahw"
-  ]
+  "order": ["title", "tabs", "featured_product_new_gED3QU", "featured_product_new_YHdahw"]
 }
